@@ -1,0 +1,66 @@
+
+<div class="col">
+  <div class="card h-100">
+    <img src="https://media.istockphoto.com/id/1256291769/pt/vetorial/girl-watching-online-classes-on-laptop-and-doing-workout-at-home.jpg?s=612x612&w=0&k=20&c=ZIJBq04UJ7vE3mU3S-7irSs--gzCgpTrpdl2okXLalI=" class="card-img-top" width="300px" height="300px" alt="...">
+    <div class="card-body">
+      <h5 class="card-title text-center text-primary">Alongamento - 01</h5>
+      <a class="btn btn-primary d-grid col-4 mx-auto" role="button" (click)="abrirModal(modal)" ><i class="pi pi-arrow-right"></i></a>
+    </div>
+  </div>
+</div>
+
+
+<ng-template #modal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Alongamento</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('fechar')"></button>
+  </div>
+  <form  (ngSubmit)="modal.close('abrirModal')">
+
+<div class="modal-body text-center">
+  <p style="font-weight: bold;">Olá seja bem vindo ao Alongamento</p>
+
+  <p>Alongamento para auxiliar na depressão</p>
+
+<p style="text-align: justify;">A depressão é uma doença mental que pode causar uma variedade de sintomas, incluindo tristeza, desesperança, perda de interesse nas atividades cotidianas e dificuldade em pensar e se concentrar. Os alongamentos podem ser uma ótima maneira de ajudar a aliviar os sintomas da depressão, pois podem melhorar o humor, reduzir o estresse e a ansiedade, e aumentar a sensação de bem-estar.</p>
+
+<p>Alguns dos benefícios dos alongamentos para a depressão incluem:</p>
+
+<p>Aumentar a produção de serotonina, um neurotransmissor que está associado ao humor positivo.
+Reduzir a produção de cortisol, um hormônio que está associado ao estresse.
+Melhorar a circulação sanguínea e a oxigenação do cérebro, o que pode ajudar a melhorar o pensamento e a concentração.
+Diminuir a tensão muscular, que pode contribuir para a ansiedade e a depressão.</p>
+
+<p>Aqui estão alguns exemplos de alongamentos que podem ser úteis para pessoas com depressão:</p>
+<br>
+<uL>
+<li style="font-weight: bold;">alongamento do pescoço</li>
+<li style="font-weight: bold;">alongamento do peito</li>
+<li style="font-weight: bold;">alongamento do ombro</li>
+<li style="font-weight: bold;">alongamento da coluna</li>
+<li style="font-weight: bold;">alongamento dos braços</li>
+<li style="font-weight: bold;">alongamento das pernas</li>
+</uL>
+
+<br>
+
+<audio width="420" height="330" controls>
+  <source src="horse.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+<br>
+
+<video width="420" height="220" controls style="border-radius: 15px;">
+  <source src="movie.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<br>
+<p style="font-weight: bold;">Matérias relacionadas</p>
+<a href="https://ge.globo.com/eu-atleta/saude/noticia/exercicios-podem-ser-grandes-aliados-na-prevencao-e-no-combate-a-depressao.ghtml">Exercícios podem ser grandes aliados na prevenção e no combate à depressão</a>
+
+</div>
+
+
+  </form>
+</ng-template>

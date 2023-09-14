@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-10 col-lg-9 mx-auto">
+      <div class=" my-5 p-1 p-md-3">
+        <div class="p-2 pt-5 p-md-5 mb-4 rounded-3">
+          <div class="container">
+
+
+                <h1 class="fw-bold" style="font-size: 20px; text-align: center;">
+                   <span class="text-primary text-center"> Olá, Seja bem vindo aos contatos médicos! </span>
+                </h1>
+
+                <h1 class="fw-bold" style="font-size: 20px; text-align: center;">
+                   <span class="text-primary text-center"> Selecione uma região e voce verá os contatos médicos</span>
+                </h1>
+
+                <ng-select [(ngModel)]="cidadeSelecionada" [options]="arrayCidades">
+                  <ng-option *ngFor="let city of arrayCidades" [value]="city.name">
+                    {{ city.name }}
+
+                  </ng-option>
+
+
+                </ng-select>
+
+                <div *ngIf="cidadeSelecionada === this.arrayCidades[1].name">
+                  <app-medicos-lages></app-medicos-lages>
+
+                </div>
+
+
+
+                <div *ngIf="cidadeSelecionada === this.arrayCidades[2].name">
+                  <app-medicos-otacilio></app-medicos-otacilio>
+
+                </div>
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

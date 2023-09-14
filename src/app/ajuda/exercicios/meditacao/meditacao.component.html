@@ -1,0 +1,58 @@
+<div class="col">
+  <div class="card h-100">
+    <img src="https://static.vecteezy.com/ti/vetor-gratis/p1/25441340-conectados-meditacao-conceito-ioga-on-line-relaxar-lazer-saudavel-estilo-de-vida-minusculo-pessoas-sentado-dentro-lotus-pose-moderno-plano-desenho-animado-estilo-ilustracao-em-branco-fundo-vetor.jpg" class="card-img-top" width="300px" height="300px" alt="...">
+    <div class="card-body">
+      <h5 class="card-title text-center text-primary">Meditação</h5>
+      <a class="btn btn-primary d-grid col-4 mx-auto" role="button" (click)="abrirModal(modal)"><i class="pi pi-arrow-right"></i></a>
+    </div>
+  </div>
+</div>
+
+<ng-template #modal let-modal>
+
+  <div class="modal-header ">
+    <h4 class="modal-title" id="modal-basic-title">Meditação</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('fechar')"></button>
+  </div>
+  <form  (ngSubmit)="modal.close('abrirModal')">
+    <div class="modal-body text-center">
+      <p style="font-weight: bold;">Olá seja bem vindo a meditação</p>
+
+      <p>Meditação para auxiliar na depressão</p>
+
+    <p style="text-align: justify;">A meditação é uma prática que envolve a concentração da atenção em um único ponto, como a respiração, um mantra ou uma imagem. A meditação regular pode ajudar a melhorar o humor, reduzir o estresse e a ansiedade, e aumentar a sensação de bem-estar.</p>
+
+    <p>Alguns dos benefícios da meditação para a depressão incluem:</p>
+
+    <p>Aumentar a produção de serotonina, um neurotransmissor que está associado ao humor positivo.
+      Reduzir a produção de cortisol, um hormônio que está associado ao estresse.
+      Melhorar a circulação sanguínea e a oxigenação do cérebro, o que pode ajudar a melhorar o pensamento e a concentração.
+      Diminuir a tensão muscular, que pode contribuir para a ansiedade e a depressão.
+      Aumentar a consciência corporal e a atenção plena.
+      Melhorar a qualidade do sono.
+      Aumentar a sensação de calma e relaxamento.</p>
+
+    <p>Aqui estão alguns exemplos de meditação que podem ser úteis para pessoas com depressão:</p>
+    <br>
+    <uL>
+    <li style="font-weight: bold;">Meditação de atenção plena (mindfulness)</li>
+    <li style="font-weight: bold;">Meditação de concentração</li>
+    <li style="font-weight: bold;">Meditação transcendental</li>
+    <li style="font-weight: bold;">Meditação guiada</li>
+
+    </uL>
+
+    <br>
+
+    <video width="420" height="220" controls style="border-radius: 15px;">
+      <source src="movie.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <br>
+    <p style="font-weight: bold;">Matérias relacionadas</p>
+    <a href="https://www.clinicajobst.com.br/meditacao-para-depressao">A meditação pode ajudar em quadros de depressão?</a>
+
+    </div>
+  </form>
+</ng-template>

@@ -1,0 +1,67 @@
+<div class="col">
+  <div class="card h-100">
+    <img src="https://img.freepik.com/vetores-gratis/aula-de-ioga-online-design-plano_23-2148533685.jpg" class="card-img-top" width="300px" height="300px" alt="...">
+    <div class="card-body">
+      <h5 class="card-title text-center text-primary">Yoga Online</h5>
+      <a class="btn btn-primary d-grid col-4 mx-auto" role="button"  (click)="abrirModal(modal)"><i class="pi pi-arrow-right"></i></a>
+    </div>
+  </div>
+</div>
+
+<ng-template #modal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Yoga</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('fechar')"></button>
+  </div>
+  <form  (ngSubmit)="modal.close('abrirModal')">
+    <div class="modal-body text-center">
+      <p style="font-weight: bold;">Olá seja bem vindo ao Yoga</p>
+
+      <p>Yoga para auxiliar na depressão</p>
+
+    <p style="text-align: justify;">A yoga é uma prática milenar que combina exercícios físicos, respiração e meditação. A prática regular de yoga pode ajudar a melhorar o humor, reduzir o estresse e a ansiedade, e aumentar a sensação de bem-estar.</p>
+
+    <p>Alguns dos benefícios da yoga para a depressão incluem:</p>
+
+    <p>Aumentar a produção de serotonina, um neurotransmissor que está associado ao humor positivo.
+      Reduzir a produção de cortisol, um hormônio que está associado ao estresse.
+      Melhorar a circulação sanguínea e a oxigenação do cérebro, o que pode ajudar a melhorar o pensamento e a concentração.
+      Diminuir a tensão muscular, que pode contribuir para a ansiedade e a depressão.
+      Melhorar a postura e a coordenação.
+      Ajudar a desenvolver a consciência corporal e a atenção plena.</p>
+
+    <p>Aqui estão alguns exemplos de alongamentos que podem ser úteis para pessoas com depressão:</p>
+    <br>
+    <uL>
+    <li style="font-weight: bold;">Postura da criança (Balasana)</li>
+    <li style="font-weight: bold;">Postura do gato e do cachorro (Marjariasana e Bitilasana)</li>
+    <li style="font-weight: bold;">Postura da ponte (Setu Bandha Sarvangasana)</li>
+    <li style="font-weight: bold;">Postura da cobra (Bhujangasana)</li>
+    <li style="font-weight: bold;">Postura da vaca (Gomukhasana)</li>
+    <li style="font-weight: bold;">Postura da árvore (Vrksasana)</li>
+    </uL>
+
+    <br>
+
+    <audio width="420" height="330" controls>
+      <source src="horse.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <br>
+
+    <video width="420" height="220" controls style="border-radius: 15px;">
+      <source src="movie.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <br>
+    <p style="font-weight: bold;">Matérias relacionadas</p>
+    <a href="https://www.uol.com.br/vivabem/noticias/redacao/2020/05/24/ioga-ajuda-a-reduzir-sintomas-depressivos-faca-estes-6-exercicios-em-casa.htm">Ioga ajuda a reduzir sintomas depressivos</a>
+
+    </div>
+  </form>
+</ng-template>
+
+
+
+
