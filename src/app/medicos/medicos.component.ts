@@ -1,4 +1,8 @@
+import { MedicosService } from './services/medicos.service';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Medicos } from './models/medicos.model';
+
 
 
 @Component({
@@ -6,23 +10,27 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './medicos.component.html',
 })
 export class MedicosComponent implements OnInit {
+  public medicos$: Observable<Medicos[]>;
 
+  public cidadeSelecionada: string;
 
 
   arrayCidades = [
-    { name: ''},
-    { name: 'Lages' },
-    { name: 'Otacilio Costa' }
+    { id: '0', name: 'Lages' },
+    { id: '1', name: 'Otacilio Costa' }
 
   ];
 
-  cidadeSelecionada: string;
 
-  constructor(){}
+
+  constructor( private medicosService: MedicosService){}
 
 
   ngOnInit(): void {
-    this.cidadeSelecionada = this.arrayCidades[0].name;
   }
+
+
+
+
 
 }

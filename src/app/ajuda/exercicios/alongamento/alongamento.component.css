@@ -1,0 +1,21 @@
+audio {
+  width: 100%;
+  margin: 2vh 0;
+}
+
+ol li {
+  text-align: start;
+
+}
+
+h2 {
+  font-size: 30px;
+}
+
+a {
+  color: white;
+}
+
+p {
+  text-align: justify;
+}

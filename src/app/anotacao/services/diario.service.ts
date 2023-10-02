@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { AngularFirestore, AngularFirestoreCollection } from "@angular/fire/compat/firestore";
 import { Observable, map, take } from "rxjs";
-import { Anotacao } from "../models/diario-anotacoes.model";
+import { Anotacao } from "../models/diario.model";
 
 @Injectable({
   providedIn: 'root'

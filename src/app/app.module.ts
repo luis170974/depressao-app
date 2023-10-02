@@ -2,11 +2,13 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { environment } from './../environments/environment';
 import { DEFAULT_CURRENCY_CODE, LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrModule } from 'ngx-toastr';
+import { NgxMaskModule } from 'ngx-mask';
 
 import { AngularFireModule } from '@angular/fire/compat'
 import { AngularFireAuthModule } from '@angular/fire/compat/auth'
@@ -18,7 +20,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import ptBr from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
 import { PainelComponent } from './painel/painel.component';
-import { CadastrarComponent } from './auth/cadastrar/cadastrar.component';
+import { CadastroComponent } from './auth/cadastro/cadastro.component';
+
 
 
 registerLocaleData(ptBr);
@@ -27,17 +30,20 @@ registerLocaleData(ptBr);
   declarations: [
     AppComponent,
     LoginComponent,
-    CadastrarComponent,
+    CadastroComponent,
     NavbarComponent,
     PainelComponent
+
 
 
 
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     NgbModule,
+    NgxMaskModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,

@@ -38,7 +38,7 @@
               <td class="text-center">{{anotacao.texto}}</td>
               <td class="d-grid d-md-block">
                 <button
-                [routerLink]="['/diario', anotacao.id]"
+                [routerLink]="['/anotacoes', anotacao.id]"
                 type="button"
                 class="btn btn-primary me-0 me-md-1 mb-1 mb-md-auto">
                 <i class="pi pi-search"></i>
@@ -85,19 +85,20 @@
             <input formControlName="titulo"
               class="form-control"
               type="text"
-              placeholder="Digite o nome da anotação">
+              placeholder="Digite o titulo da anotação">
           </div>
 
           <div class="form-outline form-white">
             <label for="texto" class="form-label">Texto da Anotação</label>
-            <textarea formControlName="texto" class="form-control" id="textAreaExample" rows="5" style="resize: none;"></textarea>
+            <textarea formControlName="texto" class="form-control" rows="10" style="resize: none;"></textarea>
 
           </div>
 
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-outline-primary col-md-3" (click)="modal.dismiss('fechar')">
-            Cancelar</button>
+            Cancelar
+          </button>
           <button type="submit" class="btn btn-primary col-md-3">Gravar</button>
         </div>
       </form>

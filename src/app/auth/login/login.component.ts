@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private modalService: NgbModal,
     private toastrService: ToastrService,
-    private afs: AngularFirestore
+
 
   ) { }
 
@@ -55,7 +55,7 @@ export class LoginComponent implements OnInit {
     try {
       const resposta = await this.authService.login(email, senha);
 
-      if (resposta != null ) {
+      if (resposta?.user ) {
         this.router.navigate(["/painel"]);
       }
 

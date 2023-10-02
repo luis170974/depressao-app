@@ -1,19 +1,18 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
-import { AbstractControl, FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { AuthenticationService } from '../services/authentication.service';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
+
 
 @Component({
-  selector: 'app-cadastrar',
-  templateUrl: './cadastrar.component.html',
-  styleUrls: ['./cadastrar.component.css']
+  selector: 'app-cadastro',
+  templateUrl: './cadastro.component.html',
+  styleUrls: ['./cadastro.component.css']
 })
-export class CadastrarComponent implements OnInit {
+export class CadastroComponent implements OnInit {
   public form: FormGroup;
-
 
 
   constructor(
@@ -21,13 +20,18 @@ export class CadastrarComponent implements OnInit {
     private authService: AuthenticationService,
     private router: Router,
     private toastrService: ToastrService,
+    private afs: AngularFirestore
 
   ) { }
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
-      email: new FormControl(""),
-      senha: new FormControl("")
+      email: new FormControl("", [Validators.required]),
+      nome: new FormControl("", [Validators.required]),
+      telefone: new FormControl("", [Validators.required]),
+      senha: new FormControl("", [Validators.required])
+
+
     });
 
   }
@@ -36,20 +40,43 @@ export class CadastrarComponent implements OnInit {
     return this.form.get("email");
   }
 
+  get nome(): AbstractControl | null {
+    return this.form.get("nome");
+  }
+
+  get telefone(): AbstractControl | null {
+    return this.form.get("telefone");
+  }
+
   get senha(): AbstractControl | null {
     return this.form.get("senha");
   }
 
 
+
+
   public async cadastrar() {
     const email = this.email?.value;
+    const nome = this.nome?.value;
     const senha = this.senha?.value;
+    const telefone = this.telefone?.value;
 
     try {
       const resposta = await this.authService.cadastrar(email, senha);
 
-      if (resposta != null ) {
-        this.router.navigate(["/painel"]);
+      if (resposta?.user ) {
+
+
+        const data = {
+          email,
+          nome,
+          senha,
+          telefone
+        };
+
+        this.afs.collection('usuarios').add(data);
+
+        this.router.navigate(["/login"]);
       }
 
     } catch (error: any) {

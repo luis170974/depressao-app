@@ -4,6 +4,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-meditacao',
   templateUrl: './meditacao.component.html',
+  styleUrls: ['./meditacao.component.css']
 })
 export class MeditacaoComponent {
 
@@ -14,7 +15,7 @@ export class MeditacaoComponent {
   public async abrirModal(modal: TemplateRef<any>) {
 
     await this.modalService.open(modal).result;
-    
+
   }
 
 }

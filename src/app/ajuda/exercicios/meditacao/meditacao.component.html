@@ -3,7 +3,9 @@
     <img src="https://static.vecteezy.com/ti/vetor-gratis/p1/25441340-conectados-meditacao-conceito-ioga-on-line-relaxar-lazer-saudavel-estilo-de-vida-minusculo-pessoas-sentado-dentro-lotus-pose-moderno-plano-desenho-animado-estilo-ilustracao-em-branco-fundo-vetor.jpg" class="card-img-top" width="300px" height="300px" alt="...">
     <div class="card-body">
       <h5 class="card-title text-center text-primary">Meditação</h5>
-      <a class="btn btn-primary d-grid col-4 mx-auto" role="button" (click)="abrirModal(modal)"><i class="pi pi-arrow-right"></i></a>
+      <div class="text-center">
+        <a class="btn btn-primary col-4" role="button" (click)="abrirModal(modal)"><i class="pi pi-external-link"></i> Abrir</a>
+      </div>
     </div>
   </div>
 </div>
@@ -16,9 +18,8 @@
   </div>
   <form  (ngSubmit)="modal.close('abrirModal')">
     <div class="modal-body text-center">
-      <p style="font-weight: bold;">Olá seja bem vindo a meditação</p>
 
-      <p>Meditação para auxiliar na depressão</p>
+    <h2>Meditação para auxiliar na depressão</h2>
 
     <p style="text-align: justify;">A meditação é uma prática que envolve a concentração da atenção em um único ponto, como a respiração, um mantra ou uma imagem. A meditação regular pode ajudar a melhorar o humor, reduzir o estresse e a ansiedade, e aumentar a sensação de bem-estar.</p>
 
@@ -34,24 +35,31 @@
 
     <p>Aqui estão alguns exemplos de meditação que podem ser úteis para pessoas com depressão:</p>
     <br>
-    <uL>
+    <ol>
     <li style="font-weight: bold;">Meditação de atenção plena (mindfulness)</li>
     <li style="font-weight: bold;">Meditação de concentração</li>
     <li style="font-weight: bold;">Meditação transcendental</li>
     <li style="font-weight: bold;">Meditação guiada</li>
 
-    </uL>
+    </ol>
+
+    <audio width="420" height="330" controls>
+      <source src="horse.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
 
     <br>
 
-    <video width="420" height="220" controls style="border-radius: 15px;">
-      <source src="movie.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3jdN91eXzrA?si=rEljRBt0BMDCvSXC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width: 100%; border-radius: 15px;"></iframe>
 
-    <br>
-    <p style="font-weight: bold;">Matérias relacionadas</p>
-    <a href="https://www.clinicajobst.com.br/meditacao-para-depressao">A meditação pode ajudar em quadros de depressão?</a>
+
+    <div class="card text-bg-primary mb-3" style="width: 100%; margin-top: 10px;">
+      <div class="card-body">
+        <h5 class="card-title">Matérias relacionadas</h5>
+        <p class="card-text"><a href="https://www.clinicajobst.com.br/meditacao-para-depressao">A meditação pode ajudar em quadros de depressão?</a></p>
+      </div>
+    </div>
+
 
     </div>
   </form>

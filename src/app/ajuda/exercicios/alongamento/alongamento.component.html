@@ -3,8 +3,10 @@
   <div class="card h-100">
     <img src="https://media.istockphoto.com/id/1256291769/pt/vetorial/girl-watching-online-classes-on-laptop-and-doing-workout-at-home.jpg?s=612x612&w=0&k=20&c=ZIJBq04UJ7vE3mU3S-7irSs--gzCgpTrpdl2okXLalI=" class="card-img-top" width="300px" height="300px" alt="...">
     <div class="card-body">
-      <h5 class="card-title text-center text-primary">Alongamento - 01</h5>
-      <a class="btn btn-primary d-grid col-4 mx-auto" role="button" (click)="abrirModal(modal)" ><i class="pi pi-arrow-right"></i></a>
+      <h5 class="card-title text-center text-primary">Alongamento</h5>
+      <div class="text-center">
+      <a class="btn btn-primary col-4" role="button" (click)="abrirModal(modal)" ><i class="pi pi-external-link"></i> Abrir</a>
+      </div>
     </div>
   </div>
 </div>
@@ -18,9 +20,8 @@
   <form  (ngSubmit)="modal.close('abrirModal')">
 
 <div class="modal-body text-center">
-  <p style="font-weight: bold;">Olá seja bem vindo ao Alongamento</p>
 
-  <p>Alongamento para auxiliar na depressão</p>
+<h2>Alongamento para auxiliar na depressão</h2>
 
 <p style="text-align: justify;">A depressão é uma doença mental que pode causar uma variedade de sintomas, incluindo tristeza, desesperança, perda de interesse nas atividades cotidianas e dificuldade em pensar e se concentrar. Os alongamentos podem ser uma ótima maneira de ajudar a aliviar os sintomas da depressão, pois podem melhorar o humor, reduzir o estresse e a ansiedade, e aumentar a sensação de bem-estar.</p>
 
@@ -33,14 +34,14 @@ Diminuir a tensão muscular, que pode contribuir para a ansiedade e a depressão
 
 <p>Aqui estão alguns exemplos de alongamentos que podem ser úteis para pessoas com depressão:</p>
 <br>
-<uL>
+<ol>
 <li style="font-weight: bold;">alongamento do pescoço</li>
 <li style="font-weight: bold;">alongamento do peito</li>
 <li style="font-weight: bold;">alongamento do ombro</li>
 <li style="font-weight: bold;">alongamento da coluna</li>
 <li style="font-weight: bold;">alongamento dos braços</li>
 <li style="font-weight: bold;">alongamento das pernas</li>
-</uL>
+</ol>
 
 <br>
 
@@ -50,14 +51,17 @@ Your browser does not support the audio element.
 </audio>
 <br>
 
-<video width="420" height="220" controls style="border-radius: 15px;">
-  <source src="movie.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MCUbwKpd57M?si=BcC3tXHlmP3wBZYn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width: 100%; border-radius: 15px; box-shadow: 1px 2px 4px;"></iframe>
 
-<br>
-<p style="font-weight: bold;">Matérias relacionadas</p>
-<a href="https://ge.globo.com/eu-atleta/saude/noticia/exercicios-podem-ser-grandes-aliados-na-prevencao-e-no-combate-a-depressao.ghtml">Exercícios podem ser grandes aliados na prevenção e no combate à depressão</a>
+
+<div class="card text-bg-primary mb-3" style="width: 100%; margin-top: 10px;">
+  <div class="card-body">
+    <h5 class="card-title">Matérias relacionadas</h5>
+    <p class="card-text"><a href="https://ge.globo.com/eu-atleta/saude/noticia/exercicios-podem-ser-grandes-aliados-na-prevencao-e-no-combate-a-depressao.ghtml" style="color: white;" target="_blank">Exercícios podem ser grandes aliados na prevenção e no combate à depressão</a></p>
+  </div>
+</div>
+
+
 
 </div>
 

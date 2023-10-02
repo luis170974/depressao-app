@@ -4,6 +4,8 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-alongamento',
   templateUrl: './alongamento.component.html',
+  styleUrls: ['./alongamento.component.css']
+
 })
 export class AlongamentoComponent {
 
@@ -15,6 +17,6 @@ export class AlongamentoComponent {
 
       await this.modalService.open(modal).result;
   }
-  
+
 
 }

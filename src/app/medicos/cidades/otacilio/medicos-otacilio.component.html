@@ -1,47 +1,22 @@
-<br>
-<div class="card mb-3" style="max-width: 820px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="https://scontent.fcfc4-1.fna.fbcdn.net/v/t1.6435-9/90440990_2866996880060768_7267945135759949824_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=174925&_nc_eui2=AeE1tTW3h82PZVnZqGaDBYsshd2mt0T-xGOF3aa3RP7EY3kiJUe3j0_-K39a9p8iR65Kja4v-Ec_G5A3jK5q4Uoq&_nc_ohc=he5HVIbHKqIAX8aIzNQ&_nc_ht=scontent.fcfc4-1.fna&oh=00_AfD451MQvKltwvdM6rRI_YmLMYNecwea05rZAf5I7U5tjw&oe=65199BC0" class="rounded-start" alt="..." width="150px" height="150px">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">Psicóloga Helen Schauffert</h5>
-        <p class="card-text"><small class="text-body-primary">CRP/SC 15257</small></p>
-        <p class="card-text"><small class="text-body-secondary"><a href=”tel:+49991042756″><i class="pi pi-phone"></i> (49) 99104-2756</a></small></p>
-      </div>
-    </div>
-  </div>
-</div>
 
-<br>
-<div class="card mb-3" style="max-width: 820px;">
+  <tr *ngFor="let medicos of (medicos$ | async )">
+    <div *ngIf="medicos.cidade === 'Otacílio Costa'">
+  <br>
+  <div class="card mb-3" style="width: 815px;">
   <div class="row g-0">
     <div class="col-md-4">
-      <img src="https://media.licdn.com/dms/image/C4D03AQHg6A5MaujVgQ/profile-displayphoto-shrink_800_800/0/1545325898585?e=1698883200&v=beta&t=pa7DT3eUXwZMBPMxKnpS0-jAwgX94GtXCtfdiGhQ1Ak" class="rounded-start" alt="..." width="150px" height="150px">
+      <img [src]="medicos.foto" class="rounded-start" alt="..." width="200px" height="200px">
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title">Psicólogo Juliano Souza Dias </h5>
-        <p class="card-text"><small class="text-body-primary">CRP/SC 12-10393</small></p>
-        <p class="card-text"><small class="text-body-secondary"><a href=”tel:+49999166318″><i class="pi pi-phone"></i> (49) 99916-6318</a></small></p>
+        <h5 class="card-title">{{ medicos.nome}}</h5>
+        <p class="card-text"><small class="text-body-primary">{{ medicos.crp }}</small></p>
+        <button type="submit" class="btn btn-primary col-md-3"><i class="pi pi-compass"></i> Localização</button>
+        <button type="submit" class="btn btn-success mx-1 col-md-2"><i class="pi pi-whatsapp"></i></button>
+        <button type="submit" class="btn btn-secondary mx-0 col-md-2"><a href="tel:+49999166318"></a><i class="pi pi-phone"></i></button>
       </div>
     </div>
   </div>
 </div>
-
-<br>
-<div class="card mb-3" style="max-width: 820px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="https://media.licdn.com/dms/image/C5603AQFpH5q7soK24g/profile-displayphoto-shrink_800_800/0/1533834091061?e=1698883200&v=beta&t=TqjQwVSKPS9SZ5bvqvrwEju5jXT96PdmC4Xb5yjxbSI" class="rounded-start" alt="..." width="150px" height="150px">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">Camila Fugazza</h5>
-        <p class="card-text"><small class="text-body-primary">CRP/SC 16366</small></p>
-        <p class="card-text"><small class="text-body-secondary"><a href=”tel:+49999982883″><i class="pi pi-phone"></i> (49) 99998-2883</a></small></p>
-      </div>
-    </div>
-  </div>
 </div>
+</tr>

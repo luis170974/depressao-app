@@ -1,12 +1,13 @@
-import { DiarioComponent } from './diario.component';
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { DiarioRoutingModule } from './diario-routing.module';
-import { DiarioDetalhesComponent } from './detalhes/diario-detalhes/diario-detalhes.component';
+import { AnotacaoRoutingModule } from './anotacao-routing.module';
 import { DetalhesComponent } from './detalhes/detalhes.component';
+import { AnotacaoDetalhesComponent } from './detalhes/anotacao-detalhes/anotacao-detalhes.component';
+import { AnotacaoComponent } from './anotacao.component';
 
 
 
@@ -14,8 +15,8 @@ import { DetalhesComponent } from './detalhes/detalhes.component';
 
 @NgModule({
   declarations: [
-    DiarioComponent,
-    DiarioDetalhesComponent,
+    AnotacaoComponent,
+    AnotacaoDetalhesComponent,
     DetalhesComponent
 
 
@@ -24,8 +25,8 @@ import { DetalhesComponent } from './detalhes/detalhes.component';
     CommonModule,
     NgbModule,
     ReactiveFormsModule,
-    DiarioRoutingModule
+    AnotacaoRoutingModule
 
   ]
 })
-export class DiarioModule { }
+export class AnotacaoModule { }

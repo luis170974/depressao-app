@@ -3,7 +3,9 @@
     <img src="https://img.freepik.com/vetores-gratis/aula-de-ioga-online-design-plano_23-2148533685.jpg" class="card-img-top" width="300px" height="300px" alt="...">
     <div class="card-body">
       <h5 class="card-title text-center text-primary">Yoga Online</h5>
-      <a class="btn btn-primary d-grid col-4 mx-auto" role="button"  (click)="abrirModal(modal)"><i class="pi pi-arrow-right"></i></a>
+      <div class="text-center">
+        <a class="btn btn-primary col-4" role="button" (click)="abrirModal(modal)"><i class="pi pi-external-link"></i> Abrir</a>
+      </div>
     </div>
   </div>
 </div>
@@ -15,9 +17,8 @@
   </div>
   <form  (ngSubmit)="modal.close('abrirModal')">
     <div class="modal-body text-center">
-      <p style="font-weight: bold;">Olá seja bem vindo ao Yoga</p>
 
-      <p>Yoga para auxiliar na depressão</p>
+      <h2>Yoga para auxiliar na depressão</h2>
 
     <p style="text-align: justify;">A yoga é uma prática milenar que combina exercícios físicos, respiração e meditação. A prática regular de yoga pode ajudar a melhorar o humor, reduzir o estresse e a ansiedade, e aumentar a sensação de bem-estar.</p>
 
@@ -32,31 +33,33 @@
 
     <p>Aqui estão alguns exemplos de alongamentos que podem ser úteis para pessoas com depressão:</p>
     <br>
-    <uL>
+    <ol>
     <li style="font-weight: bold;">Postura da criança (Balasana)</li>
     <li style="font-weight: bold;">Postura do gato e do cachorro (Marjariasana e Bitilasana)</li>
     <li style="font-weight: bold;">Postura da ponte (Setu Bandha Sarvangasana)</li>
     <li style="font-weight: bold;">Postura da cobra (Bhujangasana)</li>
     <li style="font-weight: bold;">Postura da vaca (Gomukhasana)</li>
     <li style="font-weight: bold;">Postura da árvore (Vrksasana)</li>
-    </uL>
+    </ol>
 
     <br>
 
     <audio width="420" height="330" controls>
-      <source src="horse.mp3" type="audio/mpeg">
+      <source [src]="" type="audio/mpeg">
     Your browser does not support the audio element.
     </audio>
     <br>
 
-    <video width="420" height="220" controls style="border-radius: 15px;">
-      <source src="movie.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/gVxN9T5MsDE?si=0uSOIMgkfD9agMj4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width: 100%; border-radius: 15px;"></iframe>
 
-    <br>
-    <p style="font-weight: bold;">Matérias relacionadas</p>
-    <a href="https://www.uol.com.br/vivabem/noticias/redacao/2020/05/24/ioga-ajuda-a-reduzir-sintomas-depressivos-faca-estes-6-exercicios-em-casa.htm">Ioga ajuda a reduzir sintomas depressivos</a>
+
+
+    <div class="card text-bg-primary mb-3" style="width: 100%; margin-top: 10px;">
+      <div class="card-body">
+        <h5 class="card-title">Matérias relacionadas</h5>
+        <p class="card-text"><a href="https://www.uol.com.br/vivabem/noticias/redacao/2020/05/24/ioga-ajuda-a-reduzir-sintomas-depressivos-faca-estes-6-exercicios-em-casa.htm">Ioga ajuda a reduzir sintomas depressivos</a></p>
+      </div>
+    </div>
 
     </div>
   </form>

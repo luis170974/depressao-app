@@ -5,6 +5,7 @@ import { AjudaService } from '../../services/ajuda.service';
 @Component({
   selector: 'app-yoga',
   templateUrl: './yoga.component.html',
+  styleUrls: ['./yoga.component.css']
 })
 export class YogaComponent {
 

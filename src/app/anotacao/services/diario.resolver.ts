@@ -5,7 +5,7 @@ import {
   ActivatedRouteSnapshot
 } from '@angular/router';
 import { Observable, of } from 'rxjs';
-import { Anotacao } from '../models/diario-anotacoes.model';
+import { Anotacao } from '../models/diario.model';
 import { DiarioService } from './diario.service';
 
 @Injectable({

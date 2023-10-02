@@ -4,20 +4,19 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth/services/auth.guard';
 import { PainelComponent } from './painel/painel.component';
-import { CadastrarComponent } from './auth/cadastrar/cadastrar.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { CadastroComponent } from './auth/cadastro/cadastro.component';
+
 
 const routes: Routes = [
   { path: "" , redirectTo: "login", pathMatch:"full" },
   { path: "login", component: LoginComponent  },
-  { path: "cadastrar", component: CadastrarComponent  },
-  { path: "navbar", component: NavbarComponent, canActivate: [AuthGuard]  },
+  { path: "cadastro", component: CadastroComponent},
   { path: "painel", component: PainelComponent, canActivate: [AuthGuard] },
 
   {
-    path: "diario",
-    loadChildren: () => import("./diario/diario.module")
-      .then(m => m.DiarioModule),
+    path: "anotacoes",
+    loadChildren: () => import("./anotacao/anotacao.module")
+      .then(m => m.AnotacaoModule),
     canActivate: [AuthGuard]
   },
 

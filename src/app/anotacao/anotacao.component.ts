@@ -5,14 +5,14 @@ import { ToastrService } from 'ngx-toastr';
 import { Observable, Subscription } from 'rxjs';
 import firebase from 'firebase/compat/app';
 import { AuthenticationService } from 'src/app/auth/services/authentication.service';
-import { Anotacao } from './models/diario-anotacoes.model';
+import { Anotacao } from './models/diario.model';
 import { DiarioService } from './services/diario.service';
 
 @Component({
-  selector: 'app-diario',
-  templateUrl: './diario.component.html',
+  selector: 'app-anotacao',
+  templateUrl: './anotacao.component.html',
 })
-export class DiarioComponent {
+export class AnotacaoComponent {
   public usuarioLogado: Observable<firebase.User | null>;
   public anotacoes$: Observable<Anotacao[]>;
   public form: FormGroup;
