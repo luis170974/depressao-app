@@ -1,11 +1,13 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Anotacao } from '../../models/diario.model';
+import { Anotacao } from '../../models/anotacao.model';
 
 @Component({
   selector: 'app-anotacao-detalhes',
   templateUrl: './anotacao-detalhes.component.html',
 })
-export class AnotacaoDetalhesComponent{
+export class AnotacaoDetalhesComponent {
+
   @Input() anotacao: Anotacao;
+
 
 }

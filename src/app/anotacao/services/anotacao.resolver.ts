@@ -5,17 +5,17 @@ import {
   ActivatedRouteSnapshot
 } from '@angular/router';
 import { Observable, of } from 'rxjs';
-import { Anotacao } from '../models/diario.model';
-import { DiarioService } from './diario.service';
+import { Anotacao } from '../models/anotacao.model';
+import { AnotacaoService } from './anotacao.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class DiarioResolver implements Resolve<Anotacao> {
+export class AnotacaoResolver implements Resolve<Anotacao> {
 
-  constructor(private diarioService: DiarioService){ }
+  constructor(private anotacaoService: AnotacaoService){ }
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Anotacao> {
-    return this.diarioService.selecionarPorId(route.params['id']);
+    return this.anotacaoService.selecionarPorId(route.params['id']);
   }
 }

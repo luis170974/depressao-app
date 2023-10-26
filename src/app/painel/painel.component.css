@@ -1,6 +1,19 @@
-.container .row .col-md-4 img:hover {
-  filter: grayscale(100%);
+
+.card img:hover {
+  filter: saturate(100%);
+  transition: 1s;
+
+
 }
+
+.card img {
+  filter:saturate(60%);
+
+
+}
+
+
+
 
 
 

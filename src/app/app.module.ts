@@ -8,7 +8,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrModule } from 'ngx-toastr';
-import { NgxMaskModule } from 'ngx-mask';
 
 import { AngularFireModule } from '@angular/fire/compat'
 import { AngularFireAuthModule } from '@angular/fire/compat/auth'
@@ -20,18 +19,24 @@ import { ReactiveFormsModule } from '@angular/forms';
 import ptBr from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
 import { PainelComponent } from './painel/painel.component';
+
+import { IConfig, NgxMaskModule } from 'ngx-mask';
 import { CadastroComponent } from './auth/cadastro/cadastro.component';
 
 
 
 registerLocaleData(ptBr);
 
+const maskConfig: Partial<IConfig> = {
+  validation: false,
+};
+
 @NgModule({
   declarations: [
     AppComponent,
+    NavbarComponent,
     LoginComponent,
     CadastroComponent,
-    NavbarComponent,
     PainelComponent
 
 
@@ -43,7 +48,6 @@ registerLocaleData(ptBr);
     BrowserAnimationsModule,
     AppRoutingModule,
     NgbModule,
-    NgxMaskModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
@@ -51,6 +55,9 @@ registerLocaleData(ptBr);
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right'
     }),
+    NgxMaskModule.forRoot(maskConfig),
+    NgxMaskModule.forChild()
+
   ],
   providers: [AuthenticationService,
     { provide: LOCALE_ID, useValue: "pt" },

@@ -1,11 +1,17 @@
+
 export class Medicos {
-  crp: string;
+
   id: string;
+  crp: string;
   nome: string;
   telefone: string;
   foto: string;
-  
+  whatsapp:string;
+
   cidade:string;
+
+  localizacao: string;
+
 
 
 }

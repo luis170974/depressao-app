@@ -1,31 +1,29 @@
+
+<div *ngIf="(usuarioLogado | async)">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
-
-
-
+    <a class="navbar-brand text-primary fw-semibold" routerLink="/painel" aria-current="page"><img src="../assets/logo.png" width="40" height="40">Depressão-app</a>
     <button (click)="estaColapsada = !estaColapsada" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" [ngbCollapse]="!estaColapsada">
 
       <!-- pipes do Angular -->
-      <div class="links fw-semibold w-100 text-center" *ngIf="(usuarioLogado | async)">
+      <div class="links fw-semibold w-100 text-center">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
           <li class="nav-item">
-            <a class="nav-link active text-primary" aria-current="page" routerLink="/painel"><i class="pi pi-home" ></i>  Início</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link active text-primary" aria-current="page" routerLink="/anotacoes"><i class="pi pi-book"></i> Anotações</a>
-
           </li>
+
           <li class="nav-item">
-          <a class="nav-link active text-primary" aria-current="page" routerLink="/ajuda"><i class="pi pi-heart"></i> Ajuda</a>
+            <a class="nav-link active text-primary" aria-current="page" routerLink="/ajuda"><i class="pi pi-heart"></i> Ajuda</a>
           </li>
 
           <li class="nav-item">
             <a class="nav-link active text-primary" aria-current="page" routerLink="/medicos"><i class="pi pi-calendar-plus"></i> Médicos</a>
-            </li>
+          </li>
+
           <div class="ms-auto" style="margin: 0 auto;">
             <a role="button" class="btn btn-primary px-5" (click)="sair()"><i class="pi pi-sign-out"></i> Sair</a>
           </div>
@@ -36,3 +34,4 @@
     </div>
   </div>
 </nav>
+</div>

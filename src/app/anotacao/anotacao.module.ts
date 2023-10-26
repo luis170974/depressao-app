@@ -8,6 +8,7 @@ import { AnotacaoRoutingModule } from './anotacao-routing.module';
 import { DetalhesComponent } from './detalhes/detalhes.component';
 import { AnotacaoDetalhesComponent } from './detalhes/anotacao-detalhes/anotacao-detalhes.component';
 import { AnotacaoComponent } from './anotacao.component';
+import { AnotacaoUsuarioComponent } from './anotacao-usuario/anotacao-usuario.component';
 
 
 
@@ -16,16 +17,17 @@ import { AnotacaoComponent } from './anotacao.component';
 @NgModule({
   declarations: [
     AnotacaoComponent,
+    AnotacaoUsuarioComponent,
+    DetalhesComponent,
     AnotacaoDetalhesComponent,
-    DetalhesComponent
 
 
   ],
   imports: [
     CommonModule,
-    NgbModule,
-    ReactiveFormsModule,
-    AnotacaoRoutingModule
+    AnotacaoRoutingModule,
+    ReactiveFormsModule
+
 
   ]
 })

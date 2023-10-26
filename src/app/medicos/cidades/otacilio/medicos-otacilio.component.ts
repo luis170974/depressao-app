@@ -6,7 +6,8 @@ import { MedicosService } from '../../services/medicos.service';
 
 @Component({
   selector: 'app-medicos-otacilio',
-  templateUrl: './medicos-otacilio.component.html',
+  templateUrl: './medicos-otacilio.component.html'
+
 
 })
 export class MedicosOtacilioComponent implements OnInit {
@@ -17,7 +18,7 @@ export class MedicosOtacilioComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.medicos$= this.medicosService.selecionarTodos();
+    this.medicos$ = this.medicosService.selecionarTodos();
   }
 
 }

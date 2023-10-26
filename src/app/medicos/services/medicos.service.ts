@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { AngularFirestore, AngularFirestoreCollection } from "@angular/fire/compat/firestore";
-import { Observable, map, pipe, take } from "rxjs";
+import { Observable } from "rxjs";
 import { Medicos } from "../models/medicos.model";
 
 
@@ -9,6 +9,7 @@ import { Medicos } from "../models/medicos.model";
 })
 export class MedicosService {
   private registros: AngularFirestoreCollection<Medicos>;
+
 
 
   constructor(private firestore: AngularFirestore) {
@@ -20,7 +21,12 @@ export class MedicosService {
   public selecionarTodos(): Observable<Medicos[]> {
     return this.registros.valueChanges();
 
+
+
+
   }
+
+
 
 
 }

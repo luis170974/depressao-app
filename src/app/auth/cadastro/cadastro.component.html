@@ -42,13 +42,10 @@
           <div class="form-group my-3 position-relative">
             <label class="form-label" for="telefone">Telefone</label>
             <input data-cy="telefone"
-              [ngClass]="telefone?.touched && telefone?.invalid ? 'is-invalid' : ''"
+              [ngClass]="(telefone?.touched && telefone?.invalid) ? 'is-invalid' : ''"
               formControlName="telefone"
-              type="number"
+              mask="(00) 0000-0000||(00) 00000-0000"
               id="telefone"
-              [mask]="'(99) 99999-9999'"
-              oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-              maxlength = "12"
               class="form-control form-control-lg"/>
               <div class="invalid-tooltip" *ngIf="telefone?.touched && telefone?.invalid">
                 <span *ngIf="telefone?.errors?.['required']">O telefone precisa ser preenchido.</span>

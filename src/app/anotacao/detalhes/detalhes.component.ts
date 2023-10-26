@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { Anotacao } from '../models/diario.model';
+import { Anotacao } from '../models/anotacao.model';
 
 @Component({
   selector: 'app-detalhes',

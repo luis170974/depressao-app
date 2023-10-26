@@ -1,12 +1,12 @@
 import { Injectable } from "@angular/core";
 import { AngularFirestore, AngularFirestoreCollection } from "@angular/fire/compat/firestore";
 import { Observable, map, take } from "rxjs";
-import { Anotacao } from "../models/diario.model";
+import { Anotacao } from "../models/anotacao.model";
 
 @Injectable({
   providedIn: 'root'
 })
-export class DiarioService {
+export class AnotacaoService {
   private registros: AngularFirestoreCollection<Anotacao>;
 
   constructor(private firestore: AngularFirestore) {
@@ -47,5 +47,16 @@ export class DiarioService {
     );
 
    }
+
+   public selecionarPorUserEmail(userEmail: string): Observable<Anotacao[]>{
+    return this.selecionarTodos()
+    .pipe(
+      map(anotacoes => {
+        return anotacoes.filter(anotacoes => anotacoes.userEmail === userEmail);
+      })
+    );
+
+   }
+
 
 }

@@ -28,9 +28,9 @@ export class CadastroComponent implements OnInit {
     this.form = this.formBuilder.group({
       email: new FormControl("", [Validators.required]),
       nome: new FormControl("", [Validators.required]),
-      telefone: new FormControl("", [Validators.required]),
-      senha: new FormControl("", [Validators.required])
-
+      telefone: new FormControl("", [Validators.required, Validators.pattern(/^\([1-9]{2}\) [0-9]{4,5}-[0-9]{4}$/)]),
+      senha: new FormControl("", [Validators.required]),
+      nivelUsuario: new FormControl("")
 
     });
 
@@ -55,6 +55,8 @@ export class CadastroComponent implements OnInit {
 
 
 
+
+
   public async cadastrar() {
     const email = this.email?.value;
     const nome = this.nome?.value;
@@ -67,16 +69,16 @@ export class CadastroComponent implements OnInit {
       if (resposta?.user ) {
 
 
-        const data = {
+        const usuarioCompleto = {
           email,
           nome,
           senha,
           telefone
         };
 
-        this.afs.collection('usuarios').add(data);
+        this.afs.collection('usuarios').add(usuarioCompleto);
 
-        this.router.navigate(["/login"]);
+        this.router.navigate(["/painel"]);
       }
 
     } catch (error: any) {
