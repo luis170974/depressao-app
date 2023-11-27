@@ -2,9 +2,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AnotacaoComponent } from './anotacao.component';
-import { DetalhesComponent } from './detalhes/detalhes.component';
-import { AnotacaoResolver } from './services/anotacao.resolver';
+
 import { AnotacaoUsuarioComponent } from './anotacao-usuario/anotacao-usuario.component';
+
 
 const routes: Routes = [
 
@@ -14,8 +14,7 @@ const routes: Routes = [
     { path: "", redirectTo: "usuario", pathMatch:"full"},
     { path: "usuario", component: AnotacaoUsuarioComponent}
   ]
-},
-  { path: ":id", component: DetalhesComponent, resolve: { chamado: AnotacaoResolver } }
+}
 
 ];
 

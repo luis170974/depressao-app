@@ -8,6 +8,8 @@ import { Medicos } from './models/medicos.model';
 @Component({
   selector: 'app-medicos',
   templateUrl: './medicos.component.html',
+  styleUrls: ['./medicos.component.css']
+
 })
 export class MedicosComponent implements OnInit {
   public medicos$: Observable<Medicos[]>;
@@ -16,8 +18,8 @@ export class MedicosComponent implements OnInit {
 
 
   arrayCidades = [
-    { id: '0', name: 'Lages' },
-    { id: '1', name: 'Otacilio Costa' }
+    { name: 'Lages' },
+    { name: 'Otacilio Costa' }
 
   ];
 

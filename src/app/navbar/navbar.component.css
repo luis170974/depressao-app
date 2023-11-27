@@ -1,1 +1,7 @@
+.nav-item:hover {
+  filter: drop-shadow(1px 1px rgb(124, 176, 245));
+}
 
+.navbar-brand:hover {
+  filter: drop-shadow(1px 1px rgb(124, 176, 245));
+}

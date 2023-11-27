@@ -29,8 +29,7 @@ export class CadastroComponent implements OnInit {
       email: new FormControl("", [Validators.required]),
       nome: new FormControl("", [Validators.required]),
       telefone: new FormControl("", [Validators.required, Validators.pattern(/^\([1-9]{2}\) [0-9]{4,5}-[0-9]{4}$/)]),
-      senha: new FormControl("", [Validators.required]),
-      nivelUsuario: new FormControl("")
+      senha: new FormControl("", [Validators.required])
 
     });
 

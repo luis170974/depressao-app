@@ -3,20 +3,21 @@
   <div *ngIf="medicos.cidade === 'Otacílio Costa'">
 <br>
 <div class="card mb-3" style="max-width: 815px;">
-<div class="row g-0">
-  <div class="col-md-4">
-    <img [src]="medicos.foto" class="rounded-start" alt="..." width="200px" height="200px">
-  </div>
-  <div class="col-md-8">
-    <div class="card-body">
-      <h5 class="card-title">{{ medicos.nome}}</h5>
-      <p class="card-text"><small class="text-body-primary">{{ medicos.crp }}</small></p>
-      <button type="submit" class="btn btn-primary col-md-3"><i class="pi pi-compass"></i><a [href]="medicos.localizacao" target="_blank"></a></button>
-      <button type="submit" class="btn btn-success mx-1 col-md-2"><i class="pi pi-whatsapp"></i><a [href]="medicos.whatsapp" target="_blank"></a></button>
-      <button type="submit" class="btn btn-secondary mx-0 col-md-2"><a [href]="medicos.telefone" target="_blank"></a><i class="pi pi-phone"></i></button>
+  <div class="row">
+    <div class="col-5 col-sm-4 d-flex flex-wrap justify-content-center align-items-center">
+      <img [src]="medicos.foto" class="rounded-start" alt="..." width="100%" style="height: 100%;">
+    </div>
+    <div class="col-7 col-sm-8">
+      <div class="card-body px-0">
+        <h5 class="card-title">{{ medicos.nome}}</h5>
+        <p class="card-text"><small class="text-body-primary">{{ medicos.crp }}</small></p>
+        <a href="{{medicos.telefone}}" target="_blank"><i class="pi pi-phone" style="font-size: 20px;"></i></a>
+        <a class="p-2" href="{{medicos.linkedin}}" target="_blank"><i class="pi pi-linkedin" style="font-size: 20px;"></i></a>
+        <a href="{{medicos.whatsapp}}" target="_blank"><i class="pi pi-whatsapp" style="font-size: 20px; color: green;"></i></a>
+
+      </div>
     </div>
   </div>
-</div>
 </div>
 </div>
 </div>

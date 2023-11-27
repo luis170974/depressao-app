@@ -1,0 +1,58 @@
+
+<div class="col">
+  <div class="card h-100">
+    <img src="../assets/img/img-depressao.jpg" class="card-img-top" width="300px" height="300px" alt="...">
+    <div class="card-body">
+      <h5 class="card-title text-center text-primary">O que é Depressão? </h5>
+      <div class="text-center">
+      <a class="btn btn-primary col-4" role="button" (click)="abrirModal(modal)" ><i class="pi pi-external-link"></i> Abrir</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<ng-template #modal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Sobre Depressão</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('fechar')"></button>
+  </div>
+  <form  (ngSubmit)="modal.close('abrirModal')">
+
+<div class="modal-body text-center">
+
+<h2>Resumo sobre a Depressão</h2>
+
+<p style="text-align: justify;">A depressão é uma doença mental que afeta o humor, os pensamentos e o comportamento da pessoa. E tem por características os sentimentos de tristeza, desesperança e desinteresse em atividades prazerosas. A depressão pode causar uma variedade de problemas físicos e emocionais, incluindo dificuldades para dormir, mudanças no apetite, perda de energia e dificuldade de concentração.</p>
+
+<br>
+
+<p>Alguns dos sintomas da depressão incluem:</p>
+
+<ul>
+<li class="text-primary">Sentimentos de tristeza, desesperança e desânimo</li>
+<li class="text-primary">Perda de interesse ou prazer</li>
+<li class="text-primary">Mudanças no apetite, com perda ou ganho de peso</li>
+<li class="text-primary">Dificuldades para dormir, com insônia ou sono excessivo</li>
+<li class="text-primary">Dificuldades de concentração e tomada de decisão</li>
+<li class="text-primary">Sentimentos de culpa, inutilidade ou desesperança</li>
+</ul>
+
+
+<br>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2mNnTdk_jFA?si=A3QyBEAz2elU8LPN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style="width: 100%; border-radius: 15px; box-shadow: 1px 2px 4px;"></iframe>
+<div class="card text-bg-primary mb-3" style="width: 100%; margin-top: 10px;">
+  <div class="card-body">
+    <h5 class="card-title">Matérias relacionadas</h5>
+    <p class="card-text"><a href="hhttps://psiquiatriapaulista.com.br/como-lidar-com-familiares-com-depressao-e-ansiedade/" style="color: white;" target="_blank">Como lidar com familiares com depressão e ansiedade?</a></p>
+  </div>
+</div>
+
+
+
+</div>
+
+
+  </form>
+</ng-template>

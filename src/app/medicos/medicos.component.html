@@ -1,20 +1,23 @@
 <div class="container">
   <div class="row">
     <div class="col-12 col-md-10 col-lg-9 mx-auto">
-      <div class=" my-5 p-1 p-md-3">
-        <div class="p-2 pt-5 p-md-5 mb-4 rounded-3">
+
+      <div class="text-center text-md-start py-4">
+        <h1 class="text-primary text-center">Contatos</h1>
+      </div>
+
+      <div class="p-md-3">
+        <div class=" p-md-5 mb-4 rounded-3">
           <div class="container">
 
 
-                <h1 class="fw-bold" style="font-size: 20px; text-align: center;">
-                   <span class="text-primary text-center"> Olá, Seja bem vindo aos contatos médicos! </span>
-                </h1>
 
-                <h1 class="fw-bold" style="font-size: 20px; text-align: center;">
-                   <span class="text-primary text-center"> Selecione uma região e voce verá os contatos médicos</span>
-                </h1>
+                <p style="font-size: 20px;">
+                   <span class="text-primary"> Olá, Seja bem vindo aos contatos de psicólogos! Você selecionar uma cidade e verá os contatos de psicólogos existentes </span>
+                </p>
 
-                <ng-select [(ngModel)]="cidadeSelecionada" [options]="arrayCidades">
+
+                <ng-select [(ngModel)]="cidadeSelecionada" [options]="arrayCidades" [clearOnBackspace]="false" [searchable]="false">
                   <ng-option *ngFor="let city of arrayCidades" [value]="city.name">
                     {{ city.name }}
 
@@ -39,5 +42,14 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
+
+<div class="footer text-center">
+  <div class="row">
+      <p class="copyright-text">Copyright &copy; 2023 todos os direitos de Fotos e vetores reservados pelo
+        <a href="https://pt.vecteezy.com/fotos-gratis">Vecteezy</a>
+      </p>
+
   </div>
 </div>

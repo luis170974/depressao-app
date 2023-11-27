@@ -3,8 +3,9 @@ audio {
   margin: 2vh 0;
 }
 
-ol li {
-  text-align: start;
+ul li {
+  text-align:start;
+  list-style-type: circle;
 
 }
 

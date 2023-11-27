@@ -1,0 +1,15 @@
+
+ul li {
+  text-align:start;
+  list-style-type: circle;
+
+}
+
+h2 {
+  font-size: 30px;
+}
+
+
+p {
+  text-align: justify;
+}

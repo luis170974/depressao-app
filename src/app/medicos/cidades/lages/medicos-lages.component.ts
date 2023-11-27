@@ -8,16 +8,13 @@ import { MedicosService } from '../../services/medicos.service';
   selector: 'app-medicos-lages',
   templateUrl: './medicos-lages.component.html'
 })
-export class MedicosLagesComponent  implements OnInit {
+export class MedicosLagesComponent {
 
   public medicos$: Observable<Medicos[]>;
 
 
   constructor(private medicosService: MedicosService) {
     this.medicos$ = this.medicosService.selecionarTodos();
-
-  }
-  ngOnInit(): void {
 
   }
 

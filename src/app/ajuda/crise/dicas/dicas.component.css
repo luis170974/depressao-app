@@ -1,0 +1,21 @@
+audio {
+  width: 100%;
+  margin: 2vh 0;
+}
+
+ul li {
+  text-align:start;
+  list-style-type: circle;
+
+}
+h2 {
+  font-size: 30px;
+}
+
+a {
+  color: white;
+}
+
+p {
+  text-align: justify;
+}

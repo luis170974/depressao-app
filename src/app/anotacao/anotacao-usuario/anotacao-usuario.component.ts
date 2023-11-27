@@ -14,6 +14,8 @@ import { dataFuturaValidator } from 'src/app/shared/data-futura.validator';
 @Component({
   selector: 'app-anotacao-usuario',
   templateUrl: './anotacao-usuario.component.html',
+  styleUrls: ['./anotacao-usuario.component.css']
+
 })
 export class AnotacaoUsuarioComponent {
   public usuarioLogado: firebase.User;

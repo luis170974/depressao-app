@@ -1,0 +1,51 @@
+
+<div class="col">
+  <div class="card h-100">
+    <img src="../assets/img/img-apps.jpg" class="card-img-top" width="300px" height="300px" alt="...">
+    <div class="card-body">
+      <h5 class="card-title text-center text-primary">Aplicativos de Auxílio</h5>
+      <div class="text-center">
+      <a class="btn btn-primary col-4" role="button" (click)="abrirModal(modal)" ><i class="pi pi-external-link"></i> Abrir</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<ng-template #modal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Aplicativos</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('fechar')"></button>
+  </div>
+  <form  (ngSubmit)="modal.close('abrirModal')">
+
+<div class="modal-body text-center">
+
+<p>Existem diversos aplicativos para auxilio a saúde mental e a depressão, abaixo serão listados os aplicativo com maior relevância, basta clicar e será redirecionado para baixa-los: </p>
+
+<ul>
+  <li class="text-primary"><a href="https://play.google.com/store/apps/details?id=com.calm.android&hl=pt_BR&gl=US" target="_blank" style="text-decoration: none">Calm</a>  </li>
+  <li class="text-primary"><a href="https://play.google.com/store/apps/details?id=com.cingulo.app&hl=pt_BR&gl=US" target="_blank" style="text-decoration: none">Cíngulo</a></li>
+  <li class="text-primary"><a href="https://play.google.com/store/apps/details?id=com.happify.happifyinc&hl=pt_BR&gl=US" target="_blank" style="text-decoration: none;">Happify</a></li>
+  <li class="text-primary"><a href="https://play.google.com/store/apps/details?id=net.daylio&hl=pt_BR&gl=US" target="_blank" style="text-decoration: none">Daylio</a></li>
+  <li class="text-primary"><a href="https://play.google.com/store/apps/details?id=com.brainfm.app&hl=pt_BR&gl=US" target="_blank" style="text-decoration: none">Brain.fm</a></li>
+</ul>
+
+
+<br>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/h-sd8-3CpRY?si=WPwmx74Ajd32KP9m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style="width: 100%; border-radius: 15px; box-shadow: 1px 2px 4px;"></iframe>
+<div class="card text-bg-primary mb-3" style="width: 100%; margin-top: 10px;">
+  <div class="card-body">
+    <h5 class="card-title">Matérias relacionadas</h5>
+    <p class="card-text"><a href="https://novadiagnostico.com.br/2022/01/21/5-aplicativos-que-ajudam-a-cuidar-da-saude-mental/" style="color: white;" target="_blank">Aplicativos relacionados ao cuidado com a saúde mental</a></p>
+  </div>
+</div>
+
+
+
+</div>
+
+
+  </form>
+</ng-template>

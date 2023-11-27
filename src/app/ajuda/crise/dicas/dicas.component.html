@@ -1,0 +1,55 @@
+
+<div class="col">
+  <div class="card h-100">
+    <img src="../assets/img/dicas-familiares.jpg" class="card-img-top" width="300px" height="300px" alt="...">
+    <div class="card-body">
+      <h5 class="card-title text-center text-primary">Dicas para familiares</h5>
+      <div class="text-center">
+      <a class="btn btn-primary col-4" role="button" (click)="abrirModal(modal)" ><i class="pi pi-external-link"></i> Abrir</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<ng-template #modal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Dicas para familiares</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('fechar')"></button>
+  </div>
+  <form  (ngSubmit)="modal.close('abrirModal')">
+
+<div class="modal-body text-center">
+
+<h2>Dicas para familiares que passam pela depressão</h2>
+
+<p style="text-align: justify;">A depressão é uma doença mental que pode causar uma variedade de sintomas, incluindo tristeza, desesperança, perda de interesse nas atividades cotidianas e dificuldade em pensar e se concentrar. Os alongamentos podem ser uma ótima maneira de ajudar a aliviar os sintomas da depressão, pois podem melhorar o humor, reduzir o estresse e a ansiedade, e aumentar a sensação de bem-estar.</p>
+
+<p>Algumas dicas para familiares que passam pela depressão incluem:</p>
+
+<p><span class="text-primary">Não desista:</span> A recuperação da depressão leva tempo e esforço. Seja paciente e persistente. Continue oferecendo seu apoio e acolhimento.</p>
+
+<p><span class="text-primary">Ofereça apoio e acolhimento:</span> Deixe seu familiar saber que você está lá para ele e que o ama. Ouça-o com atenção e sem julgamentos. Não tente resolver seus problemas, apenas ofereça seu apoio.</p>
+
+<p><span class="text-primary">Mantenha a calma e a serenidade:</span> É importante que você mantenha a calma e a serenidade, mesmo que seu familiar esteja agitado ou agressivo. Isso ajudará a acalmar a situação e evitar que ela piore.</p>
+
+
+<br>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HJsNOFuRZ2w?si=L4J9S3SjriW3BtMe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width: 100%; border-radius: 15px; box-shadow: 1px 2px 4px;"></iframe>
+
+
+<div class="card text-bg-primary mb-3" style="width: 100%; margin-top: 10px;">
+  <div class="card-body">
+    <h5 class="card-title">Matérias relacionadas</h5>
+    <p class="card-text"><a href="hhttps://psiquiatriapaulista.com.br/como-lidar-com-familiares-com-depressao-e-ansiedade/" style="color: white;" target="_blank">Como lidar com familiares com depressão e ansiedade?</a></p>
+  </div>
+</div>
+
+
+
+</div>
+
+
+  </form>
+</ng-template>

@@ -9,6 +9,9 @@ import { AjudaComponent } from './ajuda.component';
 import { AlongamentoComponent } from './exercicios/alongamento/alongamento.component';
 import { YogaComponent } from './exercicios/yoga/yoga.component';
 import { MeditacaoComponent } from './exercicios/meditacao/meditacao.component';
+import { DicasComponent } from './crise/dicas/dicas.component';
+import { DepressaoComponent } from './crise/depressao/depressao.component';
+import { AplicativosComponent } from './crise/aplicativos/aplicativos.component';
 
 
 @NgModule({
@@ -16,7 +19,10 @@ import { MeditacaoComponent } from './exercicios/meditacao/meditacao.component';
     AjudaComponent,
     AlongamentoComponent,
     YogaComponent,
-    MeditacaoComponent
+    MeditacaoComponent,
+    DicasComponent,
+    DepressaoComponent,
+    AplicativosComponent
 
   ],
   imports: [
